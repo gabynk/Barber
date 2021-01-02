@@ -85,7 +85,8 @@ export default () => {
 
     const handleFavClick = () => {
         setFavorited(!favorited);
-        Api.setFavorite(userInfo.id);
+        
+        // Api.setFavorite(userInfo.id);
     };
 
     const handleBackButton = () => {
@@ -150,7 +151,7 @@ export default () => {
                                     <ServiceInfo>
                                         <ServiceName> {item.name} </ServiceName>
 
-                                        <ServicePrice>R$ {item.price} </ServicePrice>
+                                        <ServicePrice>R$ {item.price.toFixed(2)} </ServicePrice>
                                     </ServiceInfo>
 
                                     <ServiceChooseButton onPress={() => handleServiceChoose(key)}>
